@@ -23,7 +23,7 @@ jobs:
         
       - name: Execute variables
         env:
-          OPSFOLIO_PAT: ${{ vars.OPSFOLIO_PAT }}
+          OPSFOLIO_PAT: ${{ var.OPSFOLIO_PAT }}
           
         run: |
           bash -x support/ci-cd-prod.sh      
