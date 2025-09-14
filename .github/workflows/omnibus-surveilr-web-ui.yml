@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - test-docker-build-pvtrepo
 
 jobs:
   build-and-push:
