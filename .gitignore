@@ -48,3 +48,10 @@ ERROR-*
 
 # windows security files
 *Zone.Identifier
+
+# Ignore all ingest folders
+ingest/
+
+# But do NOT ignore the one in ai-context-middleware
+!lib/pattern/ai-context-middleware/ingest/
+!lib/pattern/ai-context-middleware/ingest/**
