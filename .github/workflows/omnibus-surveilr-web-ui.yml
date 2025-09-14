@@ -45,10 +45,10 @@ jobs:
              --build-arg EG_SURVEILR_COM_IMAP_PASS=${{ secrets.EG_SURVEILR_COM_IMAP_PASS }} \
              --build-arg EG_SURVEILR_COM_IMAP_HOST=${{ secrets.EG_SURVEILR_COM_IMAP_HOST }} \
              --build-arg OPSFOLIO_PAT=${{ secrets.OPSFOLIO_PAT }} \
-             -t ghcr.io/surveilr/www.surveilr.com/omnibus-rssd-nginx:latest \
+             -t ghcr.io/avinashkurup/test-www.surveilr.com/omnibus-rssd-nginx:test \
              -f support/deploy/omnibus-rssd-nginx.dockerfile .
 
       # Push the Docker image to the GitHub Container Registry
       - name: Push Docker image
         run: |
-          docker push ghcr.io/surveilr/www.surveilr.com/omnibus-rssd-nginx:latest
+          docker push ghcr.io/avinashkurup/test-www.surveilr.com/omnibus-rssd-nginx:test
