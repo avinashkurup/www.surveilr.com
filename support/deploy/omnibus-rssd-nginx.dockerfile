@@ -34,7 +34,6 @@ ENV SURVEILR_SQLPKG=/root/.sqlpkg
 RUN ln -s /root/.local/bin/sqlpkg /usr/bin/sqlpkg
 ENV GITHUB_TOKEN=${GITHUB_TOKEN}
 
-
 # Clone the www.surveilr.com repository
 WORKDIR /app
 RUN git clone https://github.com/surveilr/www.surveilr.com.git
@@ -47,8 +46,6 @@ RUN mkdir -p /rssd && \
 
 # Create an index tsv file with a header for RSSDs
 RUN /bin/bash -c 'echo -e "expose_endpoint\trelative_path\trssd_name\tport\tpackage_sql" > /rssd/index.tsv'
-
-ENV OPSFOLIO_PAT=${OPSFOLIO_PAT}
 
 # Find directories containing `eg.surveilr.com-prepare.ts`, prepare RSSDs dependencies
 RUN /bin/bash -c "RSSD_SRC_PATH=(\$(find /app/www.surveilr.com -type f -name 'eg.surveilr.com-prepare.ts' -exec dirname {} \;)) && \
