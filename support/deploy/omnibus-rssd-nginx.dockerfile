@@ -5,7 +5,6 @@ ARG EG_SURVEILR_COM_IMAP_FOLDER
 ARG EG_SURVEILR_COM_IMAP_USER_NAME
 ARG EG_SURVEILR_COM_IMAP_PASS
 ARG EG_SURVEILR_COM_IMAP_HOST
-ARG OPSFOLIO_PAT
 
 # Install necessary build tools and dependencies
 RUN apt-get update && apt-get install -y \
